@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Gruvbox Light Theme */
+    --background: 43 96% 97%;          /* #fbf1c7 */
+    --foreground: 25 18% 25%;          /* #3c3836 */
+
+    --card: 43 96% 97%;
+    --card-foreground: 25 18% 25%;
+
+    --popover: 43 96% 97%;
+    --popover-foreground: 25 18% 25%;
+
+    --primary: 45 100% 51%;            /* #d79921 gruvbox yellow */
+    --primary-foreground: 25 18% 25%;
+
+    --secondary: 43 23% 89%;           /* #ebdbb2 */
+    --secondary-foreground: 25 18% 25%;
+
+    --muted: 43 23% 89%;
+    --muted-foreground: 25 43% 70%;    /* #928374 */
+
+    --accent: 142 60% 30%;             /* #98971a gruvbox green */
+    --accent-foreground: 43 96% 97%;
+
+    --destructive: 4 89% 58%;          /* #cc241d gruvbox red */
+    --destructive-foreground: 43 96% 97%;
+
+    --border: 43 14% 81%;              /* #d5c4a1 */
+    --input: 43 14% 81%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.75rem;
+
+    /* Gruvbox specific colors */
+    --gruvbox-blue: 205 82% 53%;       /* #458588 */
+    --gruvbox-purple: 333 100% 50%;    /* #b16286 */
+    --gruvbox-aqua: 180 25% 35%;       /* #689d6a */
+    --gruvbox-orange: 26 85% 55%;      /* #d65d0e */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--foreground) / 0.1);
+  }
+
+  ::selection{
+     background-color: rgb(255, 215, 0);
+     color: #000000;
+  }
+
+  .dark {
+    /* Gruvbox Dark Theme */
+    --background: 60 9% 16%;           /* #282828 */
+    --foreground: 43 23% 89%;          /* #ebdbb2 */
+
+    --card: 60 9% 16%;
+    --card-foreground: 43 23% 89%;
+
+    --popover: 60 9% 16%;
+    --popover-foreground: 43 23% 89%;
+
+    --primary: 45 100% 51%;            /* #d79921 gruvbox yellow */
+    --primary-foreground: 60 9% 16%;
+
+    --secondary: 64 7% 20%;            /* #32302f */
+    --secondary-foreground: 43 23% 89%;
+
+    --muted: 64 7% 20%;
+    --muted-foreground: 25 43% 70%;    /* #928374 */
+
+    --accent: 142 60% 30%;             /* #98971a gruvbox green */
+    --accent-foreground: 43 23% 89%;
+
+    --destructive: 4 89% 58%;          /* #cc241d gruvbox red */
+    --destructive-foreground: 43 23% 89%;
+
+    --border: 64 7% 20%;               /* #32302f */
+    --input: 64 7% 20%;
+    --ring: 45 100% 51%;
+
+    /* Gruvbox specific colors remain same */
+    --gruvbox-blue: 205 82% 53%;
+    --gruvbox-purple: 333 100% 50%;
+    --gruvbox-aqua: 180 25% 35%;
+    --gruvbox-orange: 26 85% 55%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+    
+    /* Dark shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(var(--primary) / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
